@@ -12,7 +12,7 @@ class InterceptorProvider() : Interceptor {
         val original = chain.request()
         val request = original.newBuilder()
             .header("Accept", "application/vnd.github+json")
-            .header("Authorization", "token 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")
+            //.header("Authorization", "token ")
             .build()
         val response: Response = chain.proceed(request)
         if (response.code !in 200..299) {
